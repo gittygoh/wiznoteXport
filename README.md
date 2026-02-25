@@ -1,4 +1,5 @@
 # wiznoteXport - A WizNote Export Tool
+# 为知笔记批量导出为Html文件
 
 A command-line utility to export all notes from a self-hosted or cloud WizNote account into local HTML files. This script preserves the folder structure and can also export notes organized by tags.
 
