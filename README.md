@@ -31,6 +31,9 @@ To run the script, you must provide your login credentials, the output directory
 ## Examples
 
 Here are several examples demonstrating how to use the script in different scenarios.
+```
+python wiz_export.py -u "my.email@example.com" -p "MySecretPassword123" -o "./wiz-backup" -a "https://as.wiz.cn"
+```
 
 ### 1. Basic Cloud Export
 
