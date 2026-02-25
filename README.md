@@ -26,7 +26,7 @@ To run the script, you must provide your login credentials, the output directory
 | `-u`, `--user`  | `USER_ID`     | Yes      | Your WizNote login ID (usually your email address or username).                                         |
 | `-p`, `--password`| `PASSWORD`    | Yes      | Your WizNote account password.                                                                          |
 | `-o`, `--output`  | `FOLDER_PATH` | Yes      | The local path where the exported notes and folders will be saved. The directory will be created if it does not exist. |
-| `-a`, `--api_url` | `SERVER_URL`  | Yes      | The full URL for your WizNote API server. For the official cloud service, this is typically `https://as.wiz.cn`. For private servers, this will be your server's address (e.g., `http://192.168.1.100`). |
+| `-a`, `--api_url` | `SERVER_URL`  | Yes      | The full URL for your WizNote API server. For the official cloud service, this is typically `https://as.wiz.cn`. For private servers, this will be your server's address (e.g., `http://192.168.1.100:7890`). |
 
 ## Examples
 
@@ -35,3 +35,20 @@ Here are several examples demonstrating how to use the script in different scena
 ### 1. Basic Cloud Export
 
 This is the most common use case for exporting from the official WizNote cloud service. It saves the notes to a `wiz-backup` folder in the current directory.
+
+### 2. Export from a Private, Self-Hosted Server
+
+If you are running your own WizNote server on your local network, you need to point the script to its local IP address. This example saves the backup to a specific directory on a Windows machine.
+
+### 3. Saving to a Mounted Drive on Linux
+
+This example shows how to export notes to an external USB drive or network share that has been mounted to the file system on a Linux machine.
+
+### 4. Backing up to a "Notes" Folder in your Home Directory
+
+This example uses a relative path (`~/Documents/Notes`) to save the export into a `Notes` folder located inside your user's `Documents` directory. The `~` symbol is automatically expanded by the shell to your home directory.
+
+### 5. Simple Export to the Current Folder
+
+By using `.` as the output path, this command tells the script to create the backup folders and files directly inside the directory where you are currently running the command.
+
