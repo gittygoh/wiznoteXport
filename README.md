@@ -31,27 +31,39 @@ To run the script, you must provide your login credentials, the output directory
 ## Examples
 
 Here are several examples demonstrating how to use the script in different scenarios.
-```
-python wiz_export.py -u "my.email@example.com" -p "MySecretPassword123" -o "./wiz-backup" -a "https://as.wiz.cn"
-```
 
 ### 1. Basic Cloud Export
 
 This is the most common use case for exporting from the official WizNote cloud service. It saves the notes to a `wiz-backup` folder in the current directory.
+```
+python wiz_export.py -u "my.email@example.com" -p "MySecretPassword123" -o "./wiz-backup" -a "https://as.wiz.cn"
+```
 
 ### 2. Export from a Private, Self-Hosted Server
 
 If you are running your own WizNote server on your local network, you need to point the script to its local IP address. This example saves the backup to a specific directory on a Windows machine.
+```
+python wiz_export.py --user "admin" --password "private_server_pass" --output "C:\Backups\WizNote" --api_url "http://192.168.1.50"
+```
 
 ### 3. Saving to a Mounted Drive on Linux
 
 This example shows how to export notes to an external USB drive or network share that has been mounted to the file system on a Linux machine.
+```
+python wiz_export.py -u "user@mydomain.com" -p "password" -o "/media/usb-drive/MyWizNotes" -a "http://my-wiz-server.local"
+```
 
 ### 4. Backing up to a "Notes" Folder in your Home Directory
 
 This example uses a relative path (`~/Documents/Notes`) to save the export into a `Notes` folder located inside your user's `Documents` directory. The `~` symbol is automatically expanded by the shell to your home directory.
+```
+python wiz_export.py -u "my.email@example.com" -p "MyP@ssw0rd" -o "~/Documents/Notes" -a "https://as.wiz.cn"
+```
 
 ### 5. Simple Export to the Current Folder
 
 By using `.` as the output path, this command tells the script to create the backup folders and files directly inside the directory where you are currently running the command.
+```
+python wiz_export.py -u "user@work.com" -p "P@ssw0rd!" -o "." -a "https://as.wiz.cn"
+```
 
